@@ -604,6 +604,6 @@ let game =  null;
 $storyScreen.addEventListener('click', (event) => {
     event.preventDefault();
     game = new Game(); // 게임 클래스로 새로운 게임 객체 생성하고 이름을 전해 줌
-    let openingBGM = new Audio('./bgm/opening_BGM.mp3');
+    let openingBGM = new Audio('./opening_BGM.mp3');
     openingBGM.play(); // 음악 플레이
 });
