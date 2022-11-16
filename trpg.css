@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=East+Sea+Dokdo&family=Gowun+Batang:wght@700&family=Hahmlet:wght@600&family=Nanum+Brush+Script&family=Song+Myung&family=Yeon+Sung&display=swap');
+body{
+    background-color: #b0b0b0;
+}
+body *{
+    box-sizing: border-box;
+}
+#container{
+    display: grid;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 300px 300px 300px 300px 300px;
+    row-gap: 33px;
+    font-family: 'Yeon Sung', cursive;
+    font-size: 26px;
+    font-weight: 700;
+}
+#story-screen{
+    position: relative;
+    grid-column: 2 / 5;
+    grid-row: 1 / 6;
+    background-color: #9e1717;
+    z-index: 2;
+    border: 1px solid #6c6c6c;
+}
+#story-content{
+    color: #0400ff;
+    font-family: 'Hahmlet', serif;
+    font-size: 38px;
+}
+#story-button{
+    position: absolute;
+    width: 500px;
+    height: 106px;
+    left: 202px;
+    font-family: 'Hahmlet', serif;
+    font-size: 48px;
+}
+#monster-interface{
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+}
+#menu-interface{
+    grid-row: 2 / 3;
+    grid-column: 2 / 5;
+}
+#hero-interface{
+    grid-column: 2 / 5;
+    grid-row: 3 / 4;
+}
+#monster-stat{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 60px 60px 60px;
+    row-gap: 10px;
+}
+#monster-img{
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+#monster-name{
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    border-bottom: 1px solid #6c6c6c;
+}
+#monster-hp{
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    border-bottom: 1px solid #6c6c6c;
+}
+#monster-att{
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    border-bottom: 1px solid #6c6c6c;
+}
+#menu-interface{
+    display: grid;
+    grid-template-columns: 300px 150px 150px 300px;
+    grid-template-rows: 40px 40px 40px 40px 40px;
+    position: relative;
+}
+#start-screen{
+    grid-column: 2 / 4;
+    grid-row: 1 / 6;
+}
+#name-input{
+    width: 298px;
+    height: 100px;
+}
+#start-button{
+    width: 298px;
+    height: 96px;
+}
+#game-menu{
+    grid-column: 2 / 4;
+    grid-row: 1 / 6;
+}
+#menu-1, #menu-2, #menu-3{
+    height: 40px;
+    border-top: 1px solid #6c6c6c;
+}
+#menu-input{
+    width: 300px;
+    height: 40px;
+}
+#menu-button{
+    height: 40px;
+    width: 300px;
+}
+#battle-menu{
+    grid-column: 2 / 4;
+    grid-row: 1 / 6;
+}
+#battle-1, #battle-2, #battle-3, #battle-input,  #battle-button{
+    width: 300px;
+    height: 40px;
+    border-top: 1px solid #6c6c6c;
+}
+#attack-menu{
+    grid-column: 2 / 4;
+    grid-row: 1 / 6;
+}
+#attack-1, #attack-2, #attack-3, #attack-4, #attack-5, #attack-6, #attack-7, #attack-8, #attack-input, #attack-button{
+    display: inline-block;
+    float: left;
+    width: 149px;
+    height: 39px;
+    border-top: 1px solid #6c6c6c;
+}
+#item-menu{
+    grid-column: 2 / 4;
+    grid-row: 1 / 6;
+}
+#item-1, #item-2, #item-3, #item-4, #item-5, #item-6, #item-7, #item-8, #item-input, #item-button{
+    display: inline-block;
+    float: left;
+    width: 149px;
+    height: 39px;   
+    border-top: 1px solid #6c6c6c;
+}
+#hero-interface{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 33px 33px 33px 33px 33px 33px;
+}
+#message{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    border-bottom: 1px solid #6c6c6c;
+}
+#hero-img{
+    grid-row: 2 / 7;
+    grid-column: 1 / 2;
+}
+#hero-name{
+    grid-row: 2 / 3;
+    grid-column: 2 / 4;
+    border-bottom: 1px solid #6c6c6c;
+}
+#hero-level{
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    border-bottom: 1px solid #6c6c6c;
+}
+#hero-hp{
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+    border-bottom: 1px solid #6c6c6c;
+}
+#hero-att{
+    grid-row: 5 / 6;
+    grid-column: 2 / 3;
+    border-bottom: 1px solid #6c6c6c;
+}
+#hero-xp{
+    grid-row: 6 / 7;
+    grid-column: 2 / 3;
+    border-bottom: 1px solid #6c6c6c;
+}
+#hero-muscle{
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    border-bottom: 1px solid #6c6c6c;
+}
+#hero-fat{
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+    border-bottom: 1px solid #6c6c6c;
+}
+#hero-kg{
+    grid-column: 3 / 4;
+    grid-row: 5 / 6;
+    border-bottom: 1px solid #6c6c6c;
+}
+#hero-height{
+    grid-column: 3 / 4;
+    grid-row: 6 / 7;
+    border-bottom: 1px solid #6c6c6c;
+}
+#hero-stand1, #hero-stand2, #hero-stand3, #hero-stand4{
+    grid-row: 2 / 7;
+    grid-column: 1 / 2;
+    width: 212px;
+    height: 166px;
+    background-repeat: no-repeat;
+    background-image: url(./textrpgpixel/hero01.jpg);
+    background-size: 824px 1568px;
+    background-position: -2px -14px;
+}
+#hero-stand2{  
+    background-position: -202px -14px;
+}
+#hero-stand3{
+    background-position: -402px -14px;
+}
+#hero-stand4{
+    background-position: -602px -14px;
+}
+#hero-battle-interface{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+#monster-battle-interface{
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+}
+#skill-effect{
+    display: none;
+}
+#skill-effect-beam1, #skill-effect-beam2{
+    position: absolute;
+    width: 273px;
+    height: 94px;
+    background-image: url(./textrpgpixel/hero05.gif);
+    background-position: 272px -348px;
+    top: 301px;
+    left: 607px;
+    z-index: 3;
+}
+#skill-effect-beam2{
+    left: 1009px;
+    top: 267px;
+    width: 107px;
+    height: 228px;
+    background-position: 197px -292px;
+}
+#hero-heal1, #hero-heal2, #hero-heal3, #hero-heal4{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-image: url(./textrpgpixel/hero01.jpg);
+    background-repeat: no-repeat;
+    width: 242px;
+    height: 200px;
+    background-size: 674px 1466px;
+    background-position: -200px -1048px;
+}
+#monster-littleDevil-stand1, #monster-littleDevil-stand2, #monster-littleDevil-stand3, #monster-littleDevil-stand4, #monster-greenLittleDevil-stand1, #monster-greenLittleDevil-stand2, #monster-greenLittleDevil-stand3, #monster-greenLittleDevil-stand4, #monster-blackLittleDevil-stand1, #monster-blackLittleDevil-stand2, #monster-blackLittleDevil-stand3, #monster-blackLittleDevil-stand4{
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    background-image: url(./textrpgpixel/monster_little_devil.jpg);
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 200px;
+    background-size: 1060px 1610px;
+}
+#monster-littleDevil-stand1{
+    background-position: -14px -13px;
+}
+#monster-littleDevil-stand2{
+    background-position: -242px -13px;
+}
+#monster-littleDevil-stand3{
+    background-position: -488px -13px;
+}
+#monster-littleDevil-stand4{
+    background-position: -738px -13px;
+}
+#monster-greenLittleDevil-stand1{
+    background-position: -14px -529px;
+}
+#monster-greenLittleDevil-stand2{
+    background-position: -242px -529px;
+}
+#monster-greenLittleDevil-stand3{
+    background-position: -488px -529px;
+}
+#monster-greenLittleDevil-stand4{
+    background-position: -738px -529px;
+}
+#monster-blackLittleDevil-stand4{
+    background-position: -758px -1052px;
+}
+#monster-blackLittleDevil-stand3{
+    background-position: -508px -1052px;
+}
+#monster-blackLittleDevil-stand2{
+    background-position: -262px -1052px;
+}
+#monster-blackLittleDevil-stand1{
+    background-position: -34px -1052px;
+}
+#monster-oak-stand1, #monster-oak-stand2, #monster-oak-stand3, #monster-oak-stand4, #monster-blackOak-stand1, #monster-blackOak-stand2, #monster-blackOak-stand3, #monster-blackOak-stand4{
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    background-image: url(./textrpgpixel/monster_oak.gif);
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 200px;
+    background-size: 996px 1178px;
+}
+#monster-oak-stand1{
+    background-position: 12px -6px;
+}
+#monster-oak-stand2{
+    background-position: -220px -6px;
+}
+#monster-oak-stand3{
+    background-position: -464px -6px;
+}
+#monster-oak-stand4{
+    background-position: -694px -6px;
+}
+#monster-blackOak-stand1{
+    background-position: -12px -586px;
+}
+#monster-blackOak-stand2{
+    background-position: -236px -586px;
+}
+#monster-blackOak-stand3{
+    background-position: -486px -586px;
+}
+#monster-blackOak-stand4{
+    background-position: -712px -586px;
+}
+#monster-snowGolem-stand1, #monster-snowGolem-stand2, #monster-snowGolem-stand3, #monster-snowGolem-stand4, #monster-kingGolem-stand1, #monster-kingGolem-stand2, #monster-kingGolem-stand3, #monster-kingGolem-stand4{
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    background-image: url(./textrpgpixel/monster_golem.jfif);
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 200px;
+    background-size: 970px 1314px;
+}
+#monster-snowGolem-stand1{
+    background-position: 4px -14px;
+}
+#monster-snowGolem-stand2{
+    background-position: -220px -14px;
+}
+#monster-snowGolem-stand3{
+    background-position: -448px -14px;
+}
+#monster-snowGolem-stand4{
+    background-position: -686px -14px;
+}
+#monster-kingGolem-stand1{
+    background-position: 4px -656px;
+}
+#monster-kingGolem-stand2{
+    background-position: -220px -656px;
+}
+#monster-kingGolem-stand3{
+    background-position: -448px -656px;
+}
+#monster-kingGolem-stand4{
+    background-position: -686px -656px;
+}
+#monster-flyingLizard-stand1, #monster-flyingLizard-stand2, #monster-flyingLizard-stand3, #monster-flyingLizard-stand4, #monster-blueFlyingLizard-stand1, #monster-blueFlyingLizard-stand2, #monster-blueFlyingLizard-stand3, #monster-blueFlyingLizard-stand4{
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    width: 218px;
+    height: 176px;
+    background-image: url(./textrpgpixel/monster_flyingLizard.jpg);
+    background-repeat: no-repeat;
+    background-size: 880px 1084px;
+}
+#monster-flyingLizard-stand1{
+    background-position: -4px -12px;
+}
+#monster-flyingLizard-stand2{
+    background-position: -212px -12px;
+}
+#monster-flyingLizard-stand3{
+    background-position: -416px -12px;
+}
+#monster-flyingLizard-stand4{
+    background-position: -624px -12px;
+}
+#monster-blueFlyingLizard-stand1{
+    background-position: -14px -534px;
+}
+#monster-blueFlyingLizard-stand2{
+    background-position: -222px -534px;
+}
+#monster-blueFlyingLizard-stand3{
+    background-position: -426px -534px;
+}
+#monster-blueFlyingLizard-stand4{
+    background-position: -634px -534px;
+}
+#monster-goatDevil-stand1, #monster-goatDevil-stand2, #monster-goatDevil-stand3, #monster-goatDevil-stand4{
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    background-image: url(./textrpgpixel/monster_goatDevil.jpg);
+    background-repeat: no-repeat;
+    background-size: 958px 2480px;
+    background-position: 16px -18px;
+}
+#monster-goatDevil-stand1{
+    background-position: 12px -18px;
+}
+#monster-goatDevil-stand2{
+    background-position: -294px -18px;
+}
+#monster-goatDevil-stand3{
+    background-position: -602px -18px;
+}
+#monster-goatDevil-stand4{
+    background-position: 12px -226px;
+}
+#hero-battle-interface-ready1, #hero-battle-interface-ready2, #hero-battle-interface-ready3, #hero-battle-interface-ready4{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 212px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-image: url(./textrpgpixel/hero01.jpg);
+    background-size: 824px 1568px;
+    background-position: -2px 4px;
+}
+#hero-battle-interface-ready2{
+    background-position: -202px 4px;
+}
+#hero-battle-interface-ready3{
+    background-position: -402px 4px;
+}
+#hero-battle-interface-ready4{
+    background-position: -602px 4px;
+}
+#monster-goatDevil-battle-interface-ready1, #monster-goatDevil-battle-interface-ready2, #monster-goatDevil-battle-interface-ready3, #monster-goatDevil-battle-interface-ready4{
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    width: 300px;
+    height: 200px;
+    background-image: url(./textrpgpixel/monster_goatDevil.jpg);
+    background-repeat: no-repeat;
+    background-size: 866px 2378px;
+    background-position: 16px -18px;
+    transform: scaleX(-1);
+}
+#monster-goatDevil-battle-interface-ready2{
+    background-position: -258px -18px;
+}
+#monster-goatDevil-battle-interface-ready3{
+    background-position: -526px -18px;
+}
+#monster-littleDevil-battle-interface-ready1, #monster-littleDevil-battle-interface-ready2,
+#monster-littleDevil-battle-interface-ready3, #monster-littleDevil-battle-interface-ready4, 
+#monster-greenLittleDevil-battle-interface-ready1, #monster-greenLittleDevil-battle-interface-ready2, 
+#monster-greenLittleDevil-battle-interface-ready3, #monster-greenLittleDevil-battle-interface-ready4, 
+#monster-blackLittleDevil-battle-interface-ready1, #monster-blackLittleDevil-battle-interface-ready2, 
+#monster-blackLittleDevil-battle-interface-ready3, #monster-blackLittleDevil-battle-interface-ready4{
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    width: 300px;
+    height: 200px;
+    background-image: url(./textrpgpixel/monster_little_devil.jpg);
+    background-repeat: no-repeat;
+    background-size: 1060px 1610px;
+    transform: scaleX(-1);
+}
+#monster-littleDevil-battle-interface-ready1{
+    background-position: -16px 10px;
+}
+#monster-littleDevil-battle-interface-ready2{
+    background-position: -248px 10px;
+}
+#monster-littleDevil-battle-interface-ready3{
+    background-position: -502px 10px;
+}
+#monster-littleDevil-battle-interface-ready4{
+    background-position: -758px 10px;
+}
+#monster-greenLittleDevil-battle-interface-ready1{
+    background-position: -14px -522px;
+}   
+#monster-greenLittleDevil-battle-interface-ready2{
+    background-position: -242px -522px;
+}
+#monster-greenLittleDevil-battle-interface-ready3{
+    background-position: -488px -522px;
+}
+#monster-greenLittleDevil-battle-interface-ready4{
+    background-position: -738px -522px;
+}
+#monster-blackLittleDevil-battle-interface-ready1{
+    background-position: -30px -1050px;
+}
+#monster-blackLittleDevil-battle-interface-ready2{
+    background-position: -264px -1050px;
+}
+#monster-blackLittleDevil-battle-interface-ready3{
+    background-position: -504px -1050px;
+}
+#monster-blackLittleDevil-battle-interface-ready4{
+    background-position: -758px -1050px;
+}
+#monster-oak-battle-interface-ready1, #monster-oak-battle-interface-ready2,
+#monster-oak-battle-interface-ready3, #monster-oak-battle-interface-ready4,
+#monster-blackOak-battle-interface-ready1, #monster-blackOak-battle-interface-ready2,
+#monster-blackOak-battle-interface-ready3, #monster-blackOak-battle-interface-ready4{
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    background-image: url(./textrpgpixel/monster_oak.gif);
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 200px;
+    background-size: 996px 1178px;
+    transform: scaleX(-1);
+}
+#monster-oak-battle-interface-ready1{
+    background-position: 12px -6px;
+}
+#monster-oak-battle-interface-ready2{
+    background-position: -220px -6px;
+}
+#monster-oak-battle-interface-ready3{
+    background-position: -464px -6px;
+}
+#monster-oak-battle-interface-ready4{
+    background-position: -694px -6px;
+}
+#monster-blackOak-battle-interface-ready1{
+    background-position: -12px -570px;
+}
+#monster-blackOak-battle-interface-ready2{
+    background-position: -248px -570px;
+}
+#monster-blackOak-battle-interface-ready3{
+    background-position: -496px -570px;
+}
+#monster-blackOak-battle-interface-ready4{
+    background-position: -722px -570px;
+}
+#monster-snowGolem-battle-interface-ready1, #monster-snowGolem-battle-interface-ready2, 
+#monster-snowGolem-battle-interface-ready3, #monster-snowGolem-battle-interface-ready4, 
+#monster-kingGolem-battle-interface-ready1, #monster-kingGolem-battle-interface-ready2,
+#monster-kingGolem-battle-interface-ready3, #monster-kingGolem-battle-interface-ready4{
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    background-image: url(./textrpgpixel/monster_golem.jfif);
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 200px;
+    background-size: 970px 1314px;
+    transform: scaleX(-1);
+}
+#monster-snowGolem-battle-interface-ready1{
+    background-position: 4px -14px;
+}
+#monster-snowGolem-battle-interface-ready2{
+    background-position: -220px -14px;
+}
+#monster-snowGolem-battle-interface-ready3{
+    background-position: -448px -14px;
+}
+#monster-snowGolem-battle-interface-ready4{
+    background-position: -688px -14px;
+}
+#monster-kingGolem-battle-interface-ready1{
+    background-position: 4px -656px;
+}
+#monster-kingGolem-battle-interface-ready2{
+    background-position: -220px -656px;
+}
+#monster-kingGolem-battle-interface-ready3{
+    background-position: -448px -656px;
+}
+#monster-kingGolem-battle-interface-ready4{
+    background-position: -688px -656px;
+}
+#monster-flyingLizard-battle-interface-ready1, #monster-flyingLizard-battle-interface-ready2, 
+#monster-flyingLizard-battle-interface-ready3, #monster-flyingLizard-battle-interface-ready4, 
+#monster-blueFlyingLizard-battle-interface-ready1, #monster-blueFlyingLizard-battle-interface-ready2, 
+#monster-blueFlyingLizard-battle-interface-ready3, #monster-blueFlyingLizard-battle-interface-ready4{
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    width: 218px;
+    height: 176px;
+    background-image: url(./textrpgpixel/monster_flyingLizard.jpg);
+    background-repeat: no-repeat;
+    background-size: 880px 1084px;
+    transform: scaleX(-1);
+}
+#monster-flyingLizard-battle-interface-ready1{
+    background-position: -4px -12px;
+}
+#monster-flyingLizard-battle-interface-ready2{
+    background-position: -212px -12px;
+}
+#monster-flyingLizard-battle-interface-ready3{
+    background-position: -416px -12px;
+}
+#monster-flyingLizard-battle-interface-ready4{
+    background-position: -624px -12px;
+}
+#monster-blueFlyingLizard-battle-interface-ready1{
+    background-position: -14px -534px;
+} 
+#monster-blueFlyingLizard-battle-interface-ready2{
+    background-position: -222px -534px;
+} 
+#monster-blueFlyingLizard-battle-interface-ready3{
+    background-position: -426px -534px;
+}
+#monster-blueFlyingLizard-battle-interface-ready4{
+    background-position: -634px -534px;
+}
+#hero-attack1-skill1, #hero-attack1-skill2, #hero-attack1-skill3, #hero-attack1-skill4{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 300px;
+    height: 200px;
+    background-image: url('./textrpgpixel/hero01.jpg');
+    background-repeat: no-repeat;
+    background-size: 824px 1568px;
+    background-position: 36px -372px;
+    z-index: 2;
+}
+#hero-attack1-skill2{
+    background-position: -220px -372px;
+}
+#hero-attack1-skill3{
+    background-position: -494px -372px;
+}
+#hero-attack1-skill4{
+    height: 196px;
+    background-position: -8px -562px;
+}

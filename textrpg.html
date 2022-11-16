@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Text RPG - Z</title>
+    <link rel="stylesheet" href="trpg.css">
+</head>
+<body>
+    <div id="container">
+        <div id="story-screen">
+           <div id="story-content">
+            세기말, 운동을 너무 좋아하는 헬린이 주인공은 헬창이 되기 위해서 스트렝스 5X5 훈련을 2분할 등-가슴-이두, 하체-어깨-삼두, 하루 휴식 을 매일 같이 하고 있다. 무게를 증량해야 근성장도 정체기 없이 성장할 수 있다. 3대 900을 달성하는 것이 주인공의 평생 꿈이다. 하지만 마왕이 나타나, 세상을 어지럽게 하고 운동도 마음대로 못 하게 하니, 주인공은 꿈을 위해 마왕을 무찌르고 세상을 구하려고 한다. 어쩌ㅓ구 저쩌구 운동 얘기 운동 헬스 어떻게 해왔고 엄청난 TMI를 난발하는 주인공 내가 세상을 구해서 운동을 하겠다. 내게 운동을 방해하는 자는 누구든 용서하지않겠다. 등드으등
+           </div>
+           <button id="story-button">게임시작</button> 
+        </div>
+        <div id="monster-interface">
+            <div id="monster-stat">
+                <div id="monster-img"></div>
+                <div id="monster-name"></div>
+                <div id="monster-hp"></div>
+                <div id="monster-att"></div>
+            </div>
+        </div>
+        <div id="skill-effect"></div>
+        <div id="hero-battle-interface"></div>
+        <div id="menu-interface">
+            <form id="start-screen" style="display: none;">
+                <input id="name-input" placeholder="주인공 이름을 입력하세요!">
+                <button id="start-button">시작</button>
+            </form>
+            <form id="game-menu" style="display: none;">
+                <div id="menu-1">1.모험</div>
+                <div id="menu-2">2.휴식</div>
+                <div id="menu-3">3.마을</div>
+                <input id="menu-input">
+                <button id="menu-button">입력</button>
+            </form>
+            <form id="battle-menu" style="display: none;">
+                <div id="battle-1">1.공격</div>
+                <div id="battle-2">2.아이템</div>
+                <div id="battle-3">3.도망</div>
+                <input id="battle-input">
+                <button id="battle-button">입력</button>
+            </form>
+            <form id="item-menu" style="display: none;">
+                <div id="item-1">1.물</div>
+                <div id="item-2">2.닭가슴살</div>
+                <div id="item-3">3.단백질 보충제</div>
+                <div id="item-4">4.현미밥</div>
+                <div id="item-5">5.브로콜리</div>
+                <div id="item-6">6.당근</div>
+                <div id="item-7">7.스테로이드</div>
+                <div id="item-8">8.뒤로가기</div>
+                <input id="item-input">
+                <button id="item-button">입력</button>
+            </form>
+            <form id="attack-menu" style="display: none;">
+                <div id="attack-1">1.일반공격</div>
+                <div id="attack-2">2.모래폭풍</div>
+                <div id="attack-3">3.바위던지기</div>
+                <div id="attack-4">4.전창술</div>
+                <div id="attack-5">5.에너지파</div>
+                <div id="attack-6">6.메테오</div>
+                <div id="attack-7">7.회복</div>
+                <div id="attack-8">8.뒤로가기</div>
+                <input id="attack-input">
+                <button id="attack-button">입력</button>
+            </form>
+        </div>
+        <div id="monster-battle-interface"></div>
+        <div id="hero-interface">
+            <div id="message"></div>
+            <div id="hero-img"></div>
+            <div id="hero-name"></div>
+            <div id="hero-level"></div>
+            <div id="hero-hp"></div>
+            <div id="hero-att"></div>
+            <div id="hero-muscle"></div>
+            <div id="hero-fat"></div>
+            <div id="hero-kg"></div>
+            <div id="hero-height"></div>
+            <div id="hero-xp"></div>
+        </div>
+    </div>
+    <script src="trpgClass.js"></script>
+</body>
+</html>
