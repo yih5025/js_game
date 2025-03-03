@@ -1,2 +1,4 @@
-# js_game
-using js make little game
+# TexTRPG JS GAME
+
+## in-gmae screenshot
+<img src=./textrpgpixel/image2.png> <img src=./textrpgpixel/image1.png>
